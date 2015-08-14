@@ -28,7 +28,7 @@ import android.widget.AdapterView.OnItemSelectedListener;
 /**
  * Created by optimus158 on 08-Aug-15.
  * <p/>
- * Fragment Class for adding a Contact
+ * Fragment Class for adding a Contact to the Database
  */
 public class ContactAddFragment extends Fragment implements OnClickListener, OnItemSelectedListener {
 
