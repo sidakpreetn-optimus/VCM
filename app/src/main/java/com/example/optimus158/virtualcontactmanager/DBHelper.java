@@ -152,7 +152,9 @@ public class DBHelper extends SQLiteOpenHelper {
     }
 
     /**
-     * @param contact Method for deleting a specific contact
+     * Method for deleting a specific contact
+     *
+     * @param contact
      */
     public void deleteContact(ContactsModel contact) {
         SQLiteDatabase db = this.getWritableDatabase();
@@ -162,7 +164,9 @@ public class DBHelper extends SQLiteOpenHelper {
     }
 
     /**
-     * @param group Method for deleting a specific group
+     * Method for deleting a specific group
+     *
+     * @param group
      */
     public void deleteGroup(GroupsModel group) {
         SQLiteDatabase db = this.getWritableDatabase();
@@ -172,8 +176,10 @@ public class DBHelper extends SQLiteOpenHelper {
     }
 
     /**
+     * Method for updating a contact
+     *
      * @param contact
-     * @return Method for updating a contact
+     * @return
      */
     public int updateContact(ContactsModel contact) {
         SQLiteDatabase db = this.getWritableDatabase();

@@ -114,7 +114,7 @@ public class GroupAddFragment extends Fragment implements View.OnClickListener, 
         if (status != -1 && groupCount != 0) {
             startActivity(new Intent(getActivity(), Contacts.class));
             Toast.makeText(getActivity(),
-                    "Data Inserted Successfully !!!", Toast.LENGTH_SHORT)
+                    "Data Inserted Successfully !!", Toast.LENGTH_SHORT)
                     .show();
         }
         if (status == -1) {
