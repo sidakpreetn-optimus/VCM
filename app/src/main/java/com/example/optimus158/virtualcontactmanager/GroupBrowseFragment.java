@@ -6,6 +6,8 @@ import android.graphics.BitmapFactory;
 import android.media.ThumbnailUtils;
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
+import android.support.design.widget.CoordinatorLayout;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -30,11 +32,13 @@ public class GroupBrowseFragment extends Fragment {
     private DBHelper helper;
     private RecyclerView vRecyclerView;
     private CollapsingToolbarLayout collapsingToolbarLayout;
+    private CoordinatorLayout coordinatorLayout;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.layout_browse_group_fragment, container, false);
 
         collapsingToolbarLayout = (CollapsingToolbarLayout) view.findViewById(R.id.collapsing_toolbar_layout_group);
+        coordinatorLayout = (CoordinatorLayout) view.findViewById(R.id.root_coordinator);
 
         helper = new DBHelper(getActivity());
 
@@ -59,6 +63,10 @@ public class GroupBrowseFragment extends Fragment {
      * Sets the Group details to the UI Views
      */
     private void setUpGroupDetails() {
+
+        Snackbar.make(
+                coordinatorLayout, "Showing Details", Snackbar.LENGTH_LONG
+        ).show();
 
         if (model.getPicturePath().equals("")) {
             Bitmap bitmap = ThumbnailUtils.extractThumbnail(BitmapFactory
