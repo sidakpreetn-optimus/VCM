@@ -64,9 +64,7 @@ public class GroupBrowseFragment extends Fragment {
      */
     private void setUpGroupDetails() {
 
-        Snackbar.make(
-                coordinatorLayout, "Showing Details", Snackbar.LENGTH_LONG
-        ).show();
+        Snackbar.make(coordinatorLayout, "Showing Details", Snackbar.LENGTH_LONG).show();
 
         if (model.getPicturePath().equals("")) {
             Bitmap bitmap = ThumbnailUtils.extractThumbnail(BitmapFactory
