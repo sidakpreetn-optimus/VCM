@@ -9,7 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 /**
  * Created by optimus158 on 08-Aug-15.
  * <p/>
- * Activity Class for setting different fragments to activity as per user interaction
+ * Activity Class for   setting different fragments to activity as per user interaction
  */
 public class ContactDetails extends AppCompatActivity {
 
